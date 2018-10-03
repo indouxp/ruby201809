@@ -12,11 +12,15 @@ class User # クラス名は大文字で始める
   end
 
   def sayHi
+    # メソッド内で使えるself 
+    # そのメソッドを受け取っているインスタンス自身
     puts "hi! I'm #{@name}."
+    puts "hi! I'm #{self.name}."
+    puts "hi! I'm #{name}."       # selfは曖昧でない限り省略できる
   end
 
 end
 
 indou = User.new("indou")
-indou.name = "Tatsuo Indou"
-p indou.name
+indou.sayHi # sayHiというメソッドを受け取っているインスタンス自身はindou。これをレシーバーという
+
