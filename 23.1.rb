@@ -22,7 +22,7 @@ class User
 end
 
 class AdminUser < User
-  def sayPrivate
+  def sayPrivate  # super classのprivate methodをオーバーライドできる
     puts "private from Admin"
   end
 end
